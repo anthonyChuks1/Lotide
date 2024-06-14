@@ -1,9 +1,12 @@
 const assertEqual = function(actual, expected) {
   let passMsg = `✅✅✅ Assertion Passed:  ${actual} === ${expected}`;
   let failMsg = `❌❌❌ Assertion Failed:  ${actual} !== ${expected}`;
-  if (actual === expected) return passMsg;
-  else return failMsg;
+  if (actual === expected) console.log(passMsg);
+  else return console.log(failMsg);
 };
 
-console.log(assertEqual("Lighthouse Labs", "Bootcamp"));
-console.log(assertEqual(1, 1));
+assertEqual("Lighthouse Labs", "Bootcamp");
+assertEqual(1, 1);
+assertEqual(19, '19');
+assertEqual('f','f');
+assertEqual("%20", " ");
