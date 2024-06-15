@@ -29,18 +29,22 @@ const assertArraysEqual = function(arraY1, arraY2) {
  */
 const without = function(source, itemsToRemove) {
   let copySource = source.slice();
-  if (eqArrays(source, itemsToRemove)) {
-    return "No sub array...";
-  } else {
-    for (let i = 0; i < source.length; i++) {
-      for (let toRemove of itemsToRemove) {
-        if (copySource[i] === toRemove) {
-          copySource.splice(i,1);
-        }
+  let pushSub = [];
+  let toRemoveFlag = false;
+  
+  for (let i = 0; i < source.length; i++) {
+    toRemoveFlag = false;
+    for (let toRemove of itemsToRemove) {
+      if (copySource[i] === toRemove) {
+        toRemoveFlag = true;
       }
     }
+    if (!toRemoveFlag) {
+      pushSub.push(copySource[i]);
+    }
   }
-  return copySource;
+  
+  return pushSub;
 };
 
 
@@ -56,5 +60,6 @@ console.log(without(["1", "2", "3"], [1, 2, "3"]));
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
+assertArraysEqual(without(words, ["lighthouse"]), ["hello", "world", "lighthouse"]);
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
