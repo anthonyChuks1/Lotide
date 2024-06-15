@@ -28,7 +28,7 @@ const assertArraysEqual = function(arraY1, arraY2) {
  * Does not fuction with nested arrays or objects
  */
 const without = function(source, itemsToRemove) {
-  let copySource = source;
+  let copySource = source.slice();
   if (eqArrays(source, itemsToRemove)) {
     return "No sub array...";
   } else {
@@ -43,6 +43,11 @@ const without = function(source, itemsToRemove) {
   return copySource;
 };
 
+
+let source = [1,2,3];
+console.log(`source : ${source}`);
+console.log(without(source, [1, 2, "3"]));
+console.log(`source : ${source}`);
 
 console.log(without([1,2,3], [1,2]));
 console.log(without(["1", "2", [1,2,3], "3"], [1, 2, "3"]));
