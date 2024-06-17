@@ -1,4 +1,7 @@
-/**eqArrays([], []): takes 2 arrays and returns true or false based on a perfect match.  */
+/**eqArrays(): takes 2 arrays and returns true or false based on a perfect match.  */
+/**@param {Array} arraY1 - Any single dimensional array */
+/**@param {Array} arraY2 - Any single dimensional array */
+/**@return {Boolean}*/
 const eqArrays =  function(arraY1, arraY2) {
   if (arraY1.length !== arraY2.length) {
     return false;
@@ -12,8 +15,10 @@ const eqArrays =  function(arraY1, arraY2) {
   return true;
 };
 
-
-/**assertArraysEqual(): takes in two arrays and logs a mesage to the console */
+/**assertArraysEqual(): takes 2 arrays and console.logs true or false message based on a perfect match.  */
+/**@param {Array} arraY1 - Any single dimensional array */
+/**@param {Array} arraY2 - Any single dimensional array */
+/**@return {void}*/
 const assertArraysEqual = function(arraY1, arraY2) {
   let passMsg = `✅✅✅ Assertion Passed:  ${arraY1.join('|')} === ${arraY2.join('|')}`;
   let failMsg = `❌❌❌ Assertion Failed:  ${arraY1.join('|')} !== ${arraY2.join('|')}`;

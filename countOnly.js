@@ -4,9 +4,11 @@ const assertEqual = function(actual, expected) {
   if (actual === expected) console.log(passMsg);
   else console.log(failMsg);
 };
+
 /**countOnly(): returns an object with the amount counted */
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
+/**@param {Array} allItems: an array of strings that we need to look through*/
+/**@param {Object} itemsToCount: an object specifying what to count*/
+/**@returns {Object} */
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
   for (const name of allItems) {

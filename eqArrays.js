@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertArraysEqual = function(actual, expected) {
   let passMsg = `✅✅✅ Assertion Passed:  ${actual} === ${expected}`;
   let failMsg = `❌❌❌ Assertion Failed:  ${actual} !== ${expected}`;
   if (actual === expected) console.log(passMsg);
@@ -18,5 +18,5 @@ const eqArrays =  function(arraY1, arraY2) {
   return true;
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertEqual(eqArrays([1, 3, 3], [1, 2, 3]), true); // => should FAIL
+assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertArraysEqual(eqArrays([1, 3, 3], [1, 2, 3]), true); // => should FAIL
