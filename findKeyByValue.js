@@ -12,8 +12,8 @@ const assertEqual = function(actual, expected) {
 
 /** findKeyByValue() - Returnes the first key of a given value, undefined if key is not found*/
 /** @param {Object} objectList - An object to be searched*/
-/** @param {<number, string>} searchKeyFor - The value to search for */
-/** @return {string}*/
+/** @param {number|string} searchKeyFor - The value to search for */
+/** @return {string|undefined}*/
 const findKeyByValue = function(objectList, searchKeyFor) {
   for (let objKey in objectList) {
     if (objectList[objKey] === searchKeyFor) {
