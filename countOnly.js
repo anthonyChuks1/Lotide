@@ -7,28 +7,21 @@ const assertEqual = function(actual, expected) {
 /**countOnly(): returns an object with the amount counted */
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
-const countOnly = function (allItems, itemsToCount) {
-  let results = {};//An empty object
-
-  for(let item in itemsToCount){//First take each item in the itemToCount object
-    let countInstance = 0; //always reset to 0 for each
-    let found = false; //found flag to see if the names are in the allItems array
-
-    for(let name of allItems){//Now search for item in itemToCount then add them to result{} if they are found.
-      if(name === item && itemsToCount[name]){     
-        found = true;   
-        results[name] = ++countInstance;//give the names their count 
+const countOnly = function(allItems, itemsToCount) {
+  const results = {};
+  for (const name of allItems) {
+    if (itemsToCount[name]) {
+      if (results[name]) {
+        results[name] += 1;
+      } else {
+        results[name] = 1;
       }
-      //console.log(`${item} counted ${results[name]} time(s)`);//Testing the loop
+      
     }
-   /* if (!found){ //If the name is not found on the list, add the name to result object but assign it a count of 0
-      results[item] = 0;
-    }*/
   }
   return results;
 };
-
-const firstNames = [
+let firstNames = [
   "Karl",
   "Salima",
   "Agouhanna",
