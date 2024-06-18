@@ -58,10 +58,10 @@ const nums = [112,112,223,224,334];
 const results1 = map(words, (word) => word[0]);
 const results2 = map(movies, (movie) => movie[0]); 
 const results3 = map(wordsCaps,(wCaps) => wCaps[0])
-const results4 = map(nums, (num) => num[0])
+const results4 = map(nums, (num) => num)
 
 assertArraysEqual(results1, results2); //Fail
 assertArraysEqual(results1, ['g','c','t','m','t']); //Pass
-assertArraysEqual(results4, [,,,,,]); //Pass
+assertArraysEqual(results4, [112,112,223,224,334]); //Pass
 assertArraysEqual(results3, results1);//Fail
 assertArraysEqual(results2, results3);//Fail
