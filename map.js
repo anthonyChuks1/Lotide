@@ -35,7 +35,7 @@ const assertArraysEqual = function(arraY1, arraY2) {
 
 /**
  * map(): maps an array and returns the mapped array.
- * @param {Array<string>} array - The array to be mapped.
+ * @param {Array} array - The array to be mapped.
  * @param {Function} callback - A function for callback.
  * @return {Array} results
  * 
