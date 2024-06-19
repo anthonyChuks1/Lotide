@@ -2,7 +2,7 @@
 /**@param {Array} arraY1 - Any single dimensional array */
 /**@param {Array} arraY2 - Any single dimensional array */
 /**@return {Boolean}*/
-const eqArrays =  function(arraY1, arraY2) {
+const eqArrays = function(arraY1, arraY2) {
   if (arraY1.length !== arraY2.length) {
     return false;
   } else {
@@ -41,13 +41,13 @@ const takeUntil = function(array, callback) {
   /**item: list of item values in the array; callback(item) passes item into the callback function and 
    * waits for a return boolean 
    */
-  for(item of array){
-    if(!callback(item)){/**Pass item to callback and wait for return boolean */
+  for (item of array) {
+    if (!callback(item)) {/**Pass item to callback and wait for return boolean */
       result.push(item);
     }
     else return result;
   }
-  
+
 
   return result; /**return result anyway if callback() does not return false */
 };
@@ -64,15 +64,15 @@ const results3 = takeUntil(data3, x => x < 0);
 
 
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const data4 = [",","I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const data5 = ["I've", "been", "to", "Hollywood","I've", "been", "to", "Redwood",",",];
+const data4 = [",", "I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
+const data5 = ["I've", "been", "to", "Hollywood", "I've", "been", "to", "Redwood", ",",];
 const results2 = takeUntil(data2, x => x === ',');
 const results5 = takeUntil(data5, x => x === ',');
 const results4 = takeUntil(data4, x => x === ',');
 
 
-assertArraysEqual(results1, [1,2,5,7,2]);
+assertArraysEqual(results1, [1, 2, 5, 7, 2]);
 assertArraysEqual(results2, ["I've", "been", "to", "Hollywood"]);
 assertArraysEqual(results3, []);
 assertArraysEqual(results4, []);
-assertArraysEqual(results5, ["I've", "been", "to", "Hollywood","I've", "been", "to", "Redwood"]);
+assertArraysEqual(results5, ["I've", "been", "to", "Hollywood", "I've", "been", "to", "Redwood"]);
