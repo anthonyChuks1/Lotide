@@ -10,7 +10,7 @@ const assertEqual = function(actual, expected) {
 };
 
 /**eqArrays([], []): takes 2 arrays and returns true or false based on a perfect match.  */
-const eqArrays =  function(arraY1, arraY2) {
+const eqArrays = function(arraY1, arraY2) {
   if (arraY1.length !== arraY2.length) {
     return false;
   } else {
@@ -22,7 +22,7 @@ const eqArrays =  function(arraY1, arraY2) {
   }
   return true;
 };
- 
+
 /**
  * Returns true if both objects have identical keys with identical values. Otherwise you get back a big fat false!
  * @param {Object} object1 -  AN object
@@ -32,7 +32,7 @@ const eqArrays =  function(arraY1, arraY2) {
 const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
-  
+
   let endFlag = false;
 
   if (keys1.length !== keys2.length) {
@@ -40,6 +40,9 @@ const eqObjects = function(object1, object2) {
   }
 
   for (let key1 of keys1) {
+    if (typeof object1[key1] === 'object' && typeof object2[key1] === 'object') {
+      return eqObjects(object1[key1], object2[key1]);
+    }
     if (!object2[key1]) {//check for similar keys in object2
       endFlag = true;
       break;
@@ -64,19 +67,33 @@ const eqObjects = function(object1, object2) {
 
 const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
 const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-assertEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject),true);
+assertEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true);
 
 const longSleeveMultiColorShirtObject = {
   size: "medium",
   colors: ["red", "blue"],
   sleeveLength: "long",
 };
-assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject),false);
+assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false);
 
-const objOne = {color: "blue", size: "small"};
-const objTwo = {color: "red", size: "small"};
-assertEqual(eqObjects(objOne, objTwo),false);
+const objOne = { color: "blue", size: "small" };
+const objTwo = { color: "red", size: "small" };
+assertEqual(eqObjects(objOne, objTwo), false);
 
-const objThree = {color: "blue", size: "small", texture: "soft"};
-const objFour = {color: "blue", size: "small", texture: "soft"};
-assertEqual(eqObjects(objThree, objFour),true);
+
+const objThree = { Values: { color: "blue", size: "small", texture: "soft" } };
+const objFour = { Values: { color: "blue", size: "small", texture: "soft" } };
+const objFive = { color: "blue", size: "small", texture: "soft" };
+const objSix = { color: "blue", size: "small", texture: "soft" };
+assertEqual(eqObjects(objThree, objFour), true);
+assertEqual(eqObjects(objThree, objFive), false);
+assertEqual(eqObjects(objFour, objSix), false);
+
+
+
+
+
+
+
+
+
