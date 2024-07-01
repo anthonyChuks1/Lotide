@@ -9,8 +9,4 @@ const assertEqual = function(actual, expected) {
   else console.log(failMsg);
 };
 
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual(19, '19');
-assertEqual('f','f');
-assertEqual("%20", " ");
+module.exports = assertEqual;
