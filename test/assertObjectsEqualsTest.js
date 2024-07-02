@@ -14,12 +14,12 @@ describe("#assertObjectEqual", () => {
     sleeveLength: "long",
   };
 
-  it(' { colors: ["red", "blue"], size: "medium" }; should equal  { size: "medium", colors: ["red", "blue"] };',() => {
+  it(' ',() => {
     const result = assertObjectsEqual(multiColorShirtObject, anotherMultiColorShirtObject);
     assert.strictEqual(result, true);
   })
 
-  it(' { color: "blue", size: "small" } !==  { color: "red", size: "small" };', () =>{
+  it(' ', () =>{
     const result = assertObjectsEqual(objOne,objTwo);
     assert.strictEqual(result, false)
   })

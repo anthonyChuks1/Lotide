@@ -11,9 +11,11 @@ const assertArraysEqual = function(arraY1, arraY2) {
   let failMsg = `❌❌❌ Assertion Failed:  ${arraY1} !== ${arraY2}`;
   if (eqArrays(arraY1, arraY2)) {
     console.log(passMsg);
+    return true;
   }
   else {
     console.log(failMsg);
+    return false;
   }
 };
 

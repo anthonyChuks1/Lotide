@@ -2,13 +2,13 @@ const assertEqual = require("../assertEqual")
 const assert = require('chai').assert
 
 describe('#assertEqual', () => {
-  it('Lighthouse Labs should not equal Bootcamp', () => {
+  it('', () => {
     assert.strictEqual(assertEqual('Lighthouse Labs', 'Bootcamp'), false);
   });
-  it('19 not be equal  "19" as a string', () => {
+  it('', () => {
     assert.strictEqual(assertEqual(19, '19'), false);
   });
-  it('19 should be  equal to 19 ', () => {
+  it('', () => {
     assert.strictEqual(assertEqual(19, 19), true);
   });
 });

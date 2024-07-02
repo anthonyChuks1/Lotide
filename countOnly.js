@@ -1,4 +1,4 @@
-const assertEqual = require ('./assertEqual');
+
 
 /**countOnly(): returns an object with the amount counted */
 /**@param {Array} allItems: an array of strings that we need to look through*/
