@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
-  "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "name": "@chuksmon/lotide",
+  "version": "1.0.1",
+  "description": "Lotide library for array and object management.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/anthonyChuks1/Lotide.git"
   },
-  "author": "",
+  "author": "chuksmon",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/anthonyChuks1/Lotide/issues"
