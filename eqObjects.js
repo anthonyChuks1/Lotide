@@ -1,3 +1,4 @@
+
 /**
  * assertEqual(): takes 2 arrays and returns true or false based on a perfect match.
  * @param {any} actual - Any primitive value of the actual result
@@ -96,8 +97,6 @@ assertEqual(eqObjects(objFour, objSix), false);
 
 
 
-
-
-
+module.exports = eqObjects;
 
 

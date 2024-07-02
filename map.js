@@ -66,3 +66,5 @@ assertArraysEqual(results4, [112,112,223,224,334]); //Pass
 assertArraysEqual(results3, results1);//Fail
 assertArraysEqual(results2, results3);//Fail
 //test tst
+
+module.exports = map;

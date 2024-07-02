@@ -49,3 +49,5 @@ console.log("Flattened", arraY, "=>", flatten(arraY));
 assertArraysEqual(arraY, flatten(arraY));
 assertArraysEqual(flatten(arraY), flatten(arraY));
 console.log(arraY);
+
+module.exports = flatten;

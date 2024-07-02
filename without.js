@@ -63,3 +63,4 @@ without(words, ["lighthouse"]); // no need to capture return value for this test
 assertArraysEqual(without(words, ["lighthouse"]), ["hello", "world", "lighthouse"]);
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
+module.exports = without;

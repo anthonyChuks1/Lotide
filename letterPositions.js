@@ -53,3 +53,5 @@ assertArraysEqual(sPos.H, [0]);
 assertArraysEqual(sPos.d, [12]);
 assertArraysEqual(sPos.l , [7,8,20]);
 assertArraysEqual(sPos[' '] , [3,9,13,22]);
+
+module.exports = letterPositions;

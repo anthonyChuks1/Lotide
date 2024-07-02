@@ -66,3 +66,6 @@ let result3 = findKey(
 assertEqual(result1, 'noma');
 assertEqual(result2, undefined);
 assertEqual(result3, 'Akaleri');
+
+
+module.exports = findKey;

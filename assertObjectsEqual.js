@@ -79,3 +79,5 @@ assertObjectsEqual(objOne,objTwo);
 const objThree = {color: "blue", size: "small", texture: "soft"};
 const objFour = {color: "blue", size: "small", texture: "soft"};
 assertObjectsEqual(objThree, objFour);
+
+module.exports = assertObjectsEqual; 

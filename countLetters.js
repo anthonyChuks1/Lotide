@@ -43,3 +43,5 @@ assertEqual(sauce2[' '],undefined);
 assertEqual(sauce3[' '], undefined);
 assertEqual(sauce3['H'], 1);
 assertEqual(sauce3['h'], 1);
+
+module.exports = countLetters;
