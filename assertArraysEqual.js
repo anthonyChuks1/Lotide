@@ -1,5 +1,5 @@
 
-const eqArrays = require ("./eqArrays");
+const eqArrays = require("./eqArrays");
 
 
 /**assertArraysEqual(): takes 2 arrays and console.logs true or false message based on a perfect match.  */
@@ -12,8 +12,7 @@ const assertArraysEqual = function(arraY1, arraY2) {
   if (eqArrays(arraY1, arraY2)) {
     console.log(passMsg);
     return true;
-  }
-  else {
+  } else {
     console.log(failMsg);
     return false;
   }

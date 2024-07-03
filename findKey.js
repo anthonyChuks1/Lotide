@@ -7,8 +7,8 @@
  * @return <string, undefined>
  */
 const findKey = ((obj, callback) => {
-  for(let val in obj){
-    if(callback(obj[val])){
+  for (let val in obj) {
+    if (callback(obj[val])) {
       return val;
     }
   }

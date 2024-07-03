@@ -8,8 +8,7 @@ const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(passMsg);
     return true;
-  }
-  else {
+  } else {
     console.log(failMsg);
     return false;
   }
