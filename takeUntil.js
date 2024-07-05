@@ -6,7 +6,7 @@
  * @param {Function <array>} callback  - a callback funtion that returns a boolean
  * @return {Array} result
  */
-const takeUntil = function(array, callback) {
+const takeUntil = function (array, callback) {
   const result = [];
   /**item: list of item values in the array; callback(item) passes item into the callback function and
    * waits for a return boolean
@@ -14,7 +14,10 @@ const takeUntil = function(array, callback) {
   for (let item of array) {
     if (!callback(item)) {/**Pass item to callback and wait for return boolean */
       result.push(item);
-    } else return result;
+    }
+    else {
+      return result;
+    }
   }
 
 

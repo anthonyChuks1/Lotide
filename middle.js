@@ -1,5 +1,9 @@
 
-/**middle(): Takes in an array and returns the element(s) in the middle */
+/**
+ * Takes in an array and returns the element(s) in the middle.
+ * @param {Array} arraY - The input array.
+ * @returns {Array} - The element(s) in the middle of the input array.
+ */
 const middle = function(arraY) {
   let copyArray = arraY.slice();
   let middleElement = [];

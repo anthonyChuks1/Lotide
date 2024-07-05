@@ -1,5 +1,6 @@
 
 
+
 /**Takes a string, and counts how many of each letter are in the string (case sensitive).*/
 /**@param {string} word - the string to be passed through the function.*/
 /**@returns {object} results - Letters in  words as the key and Their count as value.*/

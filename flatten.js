@@ -1,5 +1,11 @@
 
-/**flatten(): takes in an array containing elements including nested arrays and returns a flattened version of the array */
+
+/**
+ * Flattens a nested array into a single-level array.
+ *
+ * @param {Array} nestedArray - The nested array to be flattened.
+ * @returns {Array} - The flattened array.
+ */
 const flatten = function(nestedArray) {
   /**Push here*/
   let flatArray = [];

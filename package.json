@@ -1,6 +1,6 @@
 {
   "name": "@chuksmon/lotide",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Lotide library for array and object management.",
   "main": "index.js",
   "directories": {

@@ -1,6 +1,6 @@
 
 
-/**letterPositions()- Returns all the indices in the string where the characters are found in an object. */
+/**Returns all the indices in the string where the characters are found in an object. */
 /**@param {string} sentence - A string that will be passed into the letterPositions function. */
 /**@return {object} results - An object that contains the letters as a key and their positions as values. */
 const letterPositions = function(sentence) {

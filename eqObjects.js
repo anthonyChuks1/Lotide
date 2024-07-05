@@ -1,10 +1,11 @@
+
 const eqArrays = require('./eqArrays');
 
 /**
- * Returns true if both objects have identical keys with identical values. Otherwise you get back a big fat false!
- * @param {Object} object1 - The first object
- * @param {Object} object2 - The second object
- * @return {boolean} - Returns true if the objects are equal, false otherwise
+ * Checks if two objects have identical keys with identical values.
+ * @param {Object} object1 - The first object to compare.
+ * @param {Object} object2 - The second object to compare.
+ * @returns {boolean} - Returns true if the objects are equal, false otherwise.
  */
 const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);

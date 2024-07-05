@@ -1,11 +1,18 @@
 
-/**eqArrays([], []): takes 2 arrays and returns true or false based on a perfect match.  */
-const eqArrays =  function(arraY1, arraY2) {
-  if (arraY1.length !== arraY2.length) {
+
+/**
+ * Compare two arrays for equality.
+ * @param {Array} array1 - The first array to compare.
+ * @param {Array} array2 - The second array to compare.
+ * @returns {boolean} - True if the arrays are equal, false otherwise.
+ */
+const eqArrays =  function(array1, array2) {
+  if (array1.length !== array2.length) {
     return false;
-  } else {
-    for (let index in arraY1) {
-      if (arraY1[index] !== arraY2[index]) {
+  } 
+  else {
+    for (let index in array1) {
+      if (array1[index] !== array2[index]) {
         return false;
       }
     }

@@ -2,7 +2,7 @@
 
 
 /**
- * map(): maps an array and returns the mapped array.
+ * maps an array and returns the mapped array.
  * @param {Array} array - The array to be mapped.
  * @param {Function} callback - A function for callback.
  * @return {Array} results
